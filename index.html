@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anandi Singh | Data Scientist & Business Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#f5f6fa;--surface:#fff;--ink:#14192b;--muted:#566079;--line:#dfe3ee;--teal:#0b8f8a;--violet:#5b49c9;--amber:#d98a0b;--hero:#14192b;--hero-ink:#f5f6fa;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1220;--surface:#171c30;--ink:#eef0f7;--muted:#a3abc4;--line:#2a3150;--teal:#3cc9c2;--violet:#9d8cff;--amber:#f2b445;--hero:#0a0d19}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0e1220;--surface:#171c30;--ink:#eef0f7;--muted:#a3abc4;--line:#2a3150;--teal:#3cc9c2;--violet:#9d8cff;--amber:#f2b445;--hero:#0a0d19}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+h2{font-size:clamp(26px,4vw,36px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--muted);max-width:60ch;margin:0 0 32px}
+/* hero */
+.hero{background:var(--hero);color:var(--hero-ink);padding:72px 0 56px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(44px,9vw,92px);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{display:block;color:var(--teal)}
+.role{font:600 clamp(18px,2.6vw,24px)/1.4 Sora,sans-serif;margin:22px 0 10px;max-width:30ch}
+.lede{max-width:58ch;color:#c6cbe0;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--teal);background:var(--teal);color:#06201f}
+.btn.ghost{background:transparent;color:var(--hero-ink);border-color:#4a5275}
+.btn:focus-visible,.tab:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.spark{position:absolute;right:-20px;bottom:0;width:min(620px,70%);opacity:.9;pointer-events:none}
+.spark path.line{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.spark path.line{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:-34px;position:relative}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;border-top:4px solid var(--teal)}
+.kpi:nth-child(2){border-top-color:var(--violet)}.kpi:nth-child(3){border-top-color:var(--amber)}.kpi:nth-child(4){border-top-color:var(--teal)}
+.kpi b{font:800 34px/1 Sora,sans-serif;display:block}
+.kpi span{color:var(--muted);font-size:15px}
+/* timeline */
+.tl{border-left:3px solid var(--line);margin-left:6px;padding-left:26px;display:grid;gap:18px}
+.job{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 20px;position:relative}
+.job::before{content:"";position:absolute;left:-37px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--teal);border:3px solid var(--bg)}
+.job:nth-child(2)::before{background:var(--violet)}.job:nth-child(3)::before{background:var(--amber)}
+summary{cursor:pointer;list-style:none;padding:14px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:19px}
+summary small{color:var(--muted);font-size:15px;display:block;font-weight:400}
+.when{color:var(--muted);font-weight:600;font-size:15px}
+.job ul{margin:0 0 16px;padding-left:20px}.job li{margin:6px 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.tag{font-size:13.5px;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted);font-weight:600}
+/* projects */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tab{font:600 15px Sora,sans-serif;padding:9px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card svg{width:44px;height:44px}
+.card h3{font-size:18px}
+.card p{margin:0;color:var(--muted)}
+.kind{font:600 13px "Source Sans 3",sans-serif;color:var(--violet)}
+.card[data-k="biz"] .kind{color:var(--teal)}
+.card[hidden]{display:none}
+/* skills edu */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.box h3{font-size:18px;margin-bottom:12px}
+.edu p{margin:0 0 14px}.edu p small{display:block;color:var(--muted)}
+.edu p:last-child{margin:0}
+footer{background:var(--hero);color:var(--hero-ink);padding:56px 0;text-align:left}
+footer h2{color:var(--hero-ink)}
+footer .lede{margin-bottom:20px}
+.mode{position:fixed;right:14px;top:calc(12px + env(safe-area-inset-top,0px));z-index:5;border-radius:999px;border:1px solid #4a5275;background:rgba(20,25,43,.7);color:#fff;padding:7px 14px;font:600 13px Sora,sans-serif;cursor:pointer;backdrop-filter:blur(6px)}
+</style>
+</head>
+<body>
+<button class="mode" id="mode" aria-label="Toggle light or dark theme">Light / Dark</button>
+
+<header class="hero">
+  <svg class="spark" viewBox="0 0 620 260" aria-hidden="true">
+    <g stroke="#2a3150" stroke-width="1"><path d="M0 200H620M0 140H620M0 80H620"/></g>
+    <g fill="#5b49c9" opacity=".55"><rect x="40" y="190" width="34" height="70"/><rect x="140" y="160" width="34" height="100"/><rect x="240" y="130" width="34" height="130"/><rect x="340" y="110" width="34" height="150"/><rect x="440" y="70" width="34" height="190"/><rect x="540" y="40" width="34" height="220"/></g>
+    <path class="line" d="M10 215C90 195 120 180 190 150S300 125 360 100 470 60 610 20" fill="none" stroke="#3cc9c2" stroke-width="5" stroke-linecap="round"/>
+  </svg>
+  <div class="wrap" style="position:relative">
+    <h1>Anandi<span>Singh</span></h1>
+    <p class="role">Senior data scientist and business analyst who turns messy data into decisions.</p>
+    <p class="lede">Six years across healthcare, telecom and higher education. I build the pipelines, dashboards and models that help leaders see what is happening and act on it. Chicago, IL. Open to full-time roles from December 2026.</p>
+    <div class="btns">
+      <a class="btn" href="mailto:andychicago142@gmail.com">Email me</a>
+      <a class="btn ghost" href="#work">See my work</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="kpis" aria-label="Career highlights">
+    <div class="kpi"><b>6+</b><span>years in data and analytics</span></div>
+    <div class="kpi"><b>100%</b><span>on-time delivery on healthcare analytics</span></div>
+    <div class="kpi"><b>93%</b><span>project deadlines met at Ericsson</span></div>
+    <div class="kpi"><b>500+</b><span>users in A/B tests I led</span></div>
+  </div>
+</div>
+
+<section id="exp">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">From claims data to cloud pipelines to MBA program operations. Tap a role to open it.</p>
+    <div class="tl">
+      <details class="job" open>
+        <summary><div><h3>Program Manager, MBA Initiatives</h3><small>Illinois Institute of Technology, Chicago</small></div><span class="when">Jun 2025 to Dec 2026</span></summary>
+        <ul>
+          <li>Built SQL, Dremio and Excel data pipelines and leadership reports that show course delivery, enrollment, student engagement and workflow health.</li>
+          <li>Ran MBA course launches on Coursera end to end, coordinating content and schedules with Asana, JIRA and Agile sprints, and used performance data to support renewals.</li>
+        </ul>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Dremio</span><span class="tag">Excel</span><span class="tag">Agile</span><span class="tag">JIRA</span></div>
+      </details>
+      <details class="job">
+        <summary><div><h3>Data Analyst</h3><small>Ericsson Global</small></div><span class="when">Aug 2022 to Jan 2025</span></summary>
+        <ul>
+          <li>Orchestrated workflows across GCP and Azure with Python, SQL and Power BI, cutting development cost and manual effort.</li>
+          <li>Designed PostgreSQL data models and cloud ETL, then delivered executive reports through Power BI, Confluence and JIRA dashboards.</li>
+          <li>Set up CI/CD for automated testing and releases, and used Apache Spark to transform large datasets.</li>
+          <li>Defined delivery health metrics for issue status, resolution speed and at-risk items, and documented fixes for JIRA and ServiceNow reporting incidents.</li>
+          <li>Led A/B tests with 500+ users and worked with product teams to streamline workflows, meeting 93% of project deadlines.</li>
+        </ul>
+        <div class="tags"><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">Spark</span><span class="tag">Power BI</span><span class="tag">PostgreSQL</span><span class="tag">CI/CD</span></div>
+      </details>
+      <details class="job">
+        <summary><div><h3>Data Scientist</h3><small>Elevance Health (Anthem)</small></div><span class="when">Jun 2019 to Aug 2022</span></summary>
+        <ul>
+          <li>Coordinated clinical and internal stakeholders across concurrent analytics workstreams with 100% on-time delivery.</li>
+          <li>Sourced and validated high-volume claims data for Aetna and Blue Cross Blue Shield plans using SQL and PostgreSQL.</li>
+          <li>Diagnosed claims and operations discrepancies, fixed data quality gaps and redesigned daily reporting views, raising user satisfaction by 40%.</li>
+          <li>Built Power BI dashboards that give operations leaders one view of claims volume, processing status and data exceptions.</li>
+          <li>Developed Node.js services and API integrations, processed claims with Apache Spark and set up CI/CD pipelines.</li>
+        </ul>
+        <div class="tags"><span class="tag">Healthcare claims</span><span class="tag">Power BI</span><span class="tag">Spark</span><span class="tag">Node.js</span><span class="tag">HIPAA</span></div>
+      </details>
+      <details class="job">
+        <summary><div><h3>Business Development Executive</h3><small>Extramarks Education</small></div><span class="when">Sep 2018 to Jan 2019</span></summary>
+        <ul><li>Generated leads through cold calls, school visits and networking, used market research to guide outreach, kept CRM records and sent weekly sales reports built on statistical analysis.</li></ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="sub">Business problems solved with models, and creative AI builds. Filter by type.</p>
+    <div class="tabs" role="group" aria-label="Filter projects">
+      <button class="tab" data-f="all" aria-pressed="true">All</button>
+      <button class="tab" data-f="biz" aria-pressed="false">Business</button>
+      <button class="tab" data-f="ai" aria-pressed="false">AI and creative</button>
+    </div>
+    <div class="grid">
+      <article class="card" data-k="biz">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#0b8f8a" opacity=".15"/><path d="M8 32L18 22l6 6 12-16" fill="none" stroke="#0b8f8a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="kind">Business · Telecom</span><h3>Customer Churn Prediction</h3>
+        <p>Predictive models on customer service and usage data that flag customers likely to leave, so retention teams can target outreach.</p>
+      </article>
+      <article class="card" data-k="biz">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#0b8f8a" opacity=".15"/><rect x="10" y="22" width="6" height="12" fill="#0b8f8a"/><rect x="19" y="14" width="6" height="20" fill="#0b8f8a"/><rect x="28" y="8" width="6" height="26" fill="#0b8f8a"/></svg>
+        <span class="kind">Business · Finance</span><h3>Financial Customer Prediction</h3>
+        <p>A model for financial customers that combines portfolio and risk layers to inform investment decisions and financial planning.</p>
+      </article>
+      <article class="card" data-k="biz">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#0b8f8a" opacity=".15"/><ellipse cx="22" cy="13" rx="11" ry="4.5" fill="none" stroke="#0b8f8a" stroke-width="3"/><path d="M11 13v18c0 2.5 5 4.5 11 4.5s11-2 11-4.5V13M11 22c0 2.5 5 4.5 11 4.5s11-2 11-4.5" fill="none" stroke="#0b8f8a" stroke-width="3"/></svg>
+        <span class="kind">Business · Data engineering</span><h3>Foxcare Database</h3>
+        <p>A database system designed and built to improve data accuracy and support strategic decisions.</p>
+      </article>
+      <article class="card" data-k="ai">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#5b49c9" opacity=".15"/><path d="M10 12h24v16H21l-7 6v-6h-4z" fill="none" stroke="#5b49c9" stroke-width="3" stroke-linejoin="round"/><path d="M16 18h12M16 23h8" stroke="#5b49c9" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="kind">AI · Generative</span><h3>RAG Support Assistant</h3>
+        <p>An AI support tool in Python and LangChain that answers user questions using passages retrieved from real documents.</p>
+      </article>
+      <article class="card" data-k="ai">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#5b49c9" opacity=".15"/><circle cx="11" cy="12" r="3.5" fill="#5b49c9"/><circle cx="11" cy="32" r="3.5" fill="#5b49c9"/><circle cx="22" cy="22" r="3.5" fill="#5b49c9"/><circle cx="33" cy="22" r="3.5" fill="#5b49c9"/><path d="M11 12l11 10M11 32l11-10M22 22h11" stroke="#5b49c9" stroke-width="2"/></svg>
+        <span class="kind">AI · Deep learning</span><h3>Horses vs Humans Classifier</h3>
+        <p>A deep neural network for image classification, tuned through architecture choices, preprocessing, regularization and optimizers.</p>
+      </article>
+      <article class="card" data-k="ai">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="#5b49c9" opacity=".15"/><path d="M9 33l8-10 6 5 12-17" fill="none" stroke="#5b49c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 7"/><circle cx="9" cy="33" r="3" fill="#5b49c9"/><circle cx="35" cy="11" r="3.5" fill="#d98a0b"/></svg>
+        <span class="kind">AI · Agents</span><h3>Problem Solving Agent</h3>
+        <p>An AI agent that takes a user-defined problem, builds the environment for it, then computes a solution path and its cost.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="padding-top:0">
+  <div class="wrap">
+    <h2>Skills and education</h2>
+    <p class="sub">The tools I use and the training behind them.</p>
+    <div class="two">
+      <div class="box">
+        <h3>Toolkit</h3>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Vertica</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">PySpark</span><span class="tag">Databricks</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">ETL</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">DAX</span><span class="tag">Excel</span><span class="tag">A/B testing</span><span class="tag">Machine learning</span><span class="tag">Deep learning</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">CI/CD</span><span class="tag">Node.js</span><span class="tag">JIRA</span><span class="tag">Agile</span><span class="tag">ServiceNow</span><span class="tag">Healthcare analytics</span><span class="tag">Stakeholder management</span>
+        </div>
+      </div>
+      <div class="box edu">
+        <h3>Education</h3>
+        <p><b>MS, Business Analytics</b><small>Illinois Institute of Technology, Jan 2025 to Dec 2026</small></p>
+        <p><b>MS, Data Science and Engineering</b><small>Birla Institute of Technology and Science, 2022 to 2024</small></p>
+        <p><b>BS, Information Technology</b><small>Babu Banarasi Das Northern India Institute of Technology, 2015 to 2019</small></p>
+        <p><small>Languages: English, Hindi</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Let’s work together</h2>
+    <p class="lede">I’m looking for a full-time analytics or data science role starting in December. If your team needs someone who can connect data work to business results, I’d love to talk.</p>
+    <div class="btns"><a class="btn" href="mailto:andychicago142@gmail.com">andychicago142@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab'),cards=document.querySelectorAll('.card');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t?'true':'false')});
+    var f=t.getAttribute('data-f');
+    cards.forEach(function(c){c.hidden=!(f==='all'||c.getAttribute('data-k')===f)});
+  })});
+  document.getElementById('mode').addEventListener('click',function(){
+    var r=document.documentElement,dark=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);
+    r.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>
